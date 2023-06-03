@@ -1,6 +1,22 @@
+:root
+{
+    --negro: rgba(30,30,30);
+    --pastel: wheat;
+    --violet: blueviolet;
+    --darkviolet: rgba(101,33,165);
+    --blanco: aliceblue;
+}
 *
 {
     box-sizing: border-box;
+}
+
+
+/*Esto es para que al dar click haga un scroll
+más fluido y no sea tan cuadrado.*/
+html
+{
+    scroll-behavior: smooth; 
 }
 
 body 
@@ -14,8 +30,316 @@ h2 {font-size: 2.7em;}
 h3 {font-size: 2em;}
 p {font-size: 1.25em;}
 ul {list-style: none;}
+li {font-size: 2rem;}
 
 button
 {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 12rem;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: blueviolet;
+}
+
+button:hover
+{
+    background-color: rgba(101, 33, 165);
+    transition: 1s;
+}
+
+ .container
+ {
+    max-width: 1400px;
+    margin: auto;
+ }
+
+
+ .color-acento
+ {
+    color: blueviolet;
+ }
+ header
+ {
+    background-color: rgba(245, 245, 245);
+ }
+
+
+header .logo
+{
+    margin: 0;
+    padding: 2.5rem;
+    font-weight: bold;
+    color: blueviolet;
+    font-size: 3.6rem;
+}
+
+header .container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 2.5rem;
+}
+
+header a
+{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover
+{
+    color: blueviolet;
+}
+
+#hero
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: var(--pastel);
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ) ,url("/imagenes/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1 
+{
+    color: var(--pastel);
+}
+
+#hero button
+{
+    font-size: 2em;
+}
+
+#somos-proya
+{
+
+}
+
+#somos-proya .container
+{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#nuestros-programas
+{
+    background-color: rgba(30,30,30);
+    color: wheat;
+    text-align: center;
+
+}
+
+#nuestros-programas .container
+{
+    padding: 100px 12px;   
+}
+
+#nuestros-programas h2 
+{
+    margin-top: 0;
+}
+#nuestros-programas p 
+{
+    display: none;
+}
+
+#nuestros-programas .carta
+{  
+    background-position: center center; /*Pocicion centrada*/
+    background-size: cover;/*para que la imagen ocope todo el espacio*/
+    padding: 50px;
+    margin: 15px;
+    border-radius: 2rem;
+}
+
+.carta:nth-child(1)
+{
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ) ,url("/imagenes/hero.jpg");
+}
+
+.carta:nth-child(2)
+{
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ) ,url("/imagenes/hero.jpg");
+}
+
+.carta:nth-child(3)
+{
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ) ,url("/imagenes/hero.jpg");
+}
+
+#caracteristicas .container
+{
+    text-align: center;
+    padding: 20rem 1.2rem;
+}
+
+#caracteristicas li 
+{
+    margin: 12px 0px;
+    font-weight: bold;
     
+}
+
+#final
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--negro);
+    color: var(--pastel);
+    padding: 5rem 2rem;
+    /*height: 80vh;*/
+}
+
+#final h2 
+{
+    font-size: 9vw;
+}
+
+#final button
+{
+    font-size: 5vw;
+}
+
+footer
+{
+    background-color: var(--blanco);
+}
+
+footer p
+{
+    margin: 0;
+    color: rgba(101, 100, 100);
+}
+
+footer .container
+{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+
+
+
+/*
+======================================================================================================
+            Media queri, para pantallas grandes
+======================================================================================================
+*/
+
+@media (min-width: 750px) 
+{ 
+
+    header
+    {
+        padding: 5px;
+        margin: .3rem;
+        position: fixed;
+        width: 97%;
+        height: 15%;
+        border-radius: 70px;
+        background-color: rgba(165, 180, 197, 0.473);
+        
+    }
+
+
+    header .container
+    {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav
+    {
+        flex-direction: row;
+        padding-right: 25px;
+        padding-bottom: 15px;
+
+    }
+
+    header nav a
+    {
+        color: whitesmoke;
+
+    }
+
+    header .logo
+    {
+        color: var(--pastel);
+        padding: .2rem 4rem;
+    }
+
+
+    #somos-proya .container
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    #somos-proya .texto
+    {
+        width: 50%;
+        max-width: 400px;
+        text-align: initial;
+        padding: 0px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    #somos-proya .img-container
+    {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        ), url("imagenes/hero.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 100rem;
+    }
+
+
 }
