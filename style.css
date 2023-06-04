@@ -251,7 +251,7 @@ footer p
 
 footer .container
 {
-    height: 150px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -313,7 +313,7 @@ footer .container
     #somos-proya .container
     {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
     }
 
     #somos-proya .texto
@@ -340,6 +340,50 @@ footer .container
         height: 500px;
         width: 100rem;
     }
+
+    #nuestros-programas .programas
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    #nuestros-programas p 
+    {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    /*
+    #nuestros-programas h3
+    {
+        margin-top: 0;
+    }
+    */
+
+    #nuestros-programas .carta
+    {
+        padding: 15px;
+    }
+
+    #caracteristicas
+    {
+        background-image: url("imagenes/hero.jpg");
+        background-repeat: no-repeat;
+        background-size: 500px 400px;
+        background-position: 400px 200px;
+    }
+
+    #caracteristicas .container
+    {
+        text-align: initial;
+    }
+
+    #caracteristicas ul
+    {
+        margin-left: 100px;
+    }
+
+
 
 
 }
